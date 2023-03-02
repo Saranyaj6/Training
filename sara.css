@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,html{
+  overflow-x: hidden;
+}
+
+.head 
+{
+  background-image: url(images/373636.jpg);
+  background-position: center;
+}
+.head p{
+  color: white;
+  font-family: algerian;
+  font-size: 18px;
+  text-align: center;
+  padding: 50px;
+}
+
+.navbar {
+  
+  color: #131212;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo a {
+  font-size: 24px;
+  font-weight: bold;
+  color: #e7e2e2;
+  text-decoration: none;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.menu-toggle input {
+  display: none;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 30px;
+  height: 5px;
+  margin-bottom: 5px;
+  background-color: #fff;
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu li {
+  list-style: none;
+  margin-right: 20px;
+}
+
+.menu li a {
+  font-size: 18px;
+  color: #f4f4f4;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+  }
+  .menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #333;
+  }
+  .menu li {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  .menu li:last-child {
+    margin-bottom: 0;
+  }
+  .menu-toggle input:checked ~ .menu {
+    display: flex;
+  }
+}
+/* end */
+.about
+{
+  font-family: Algerian;
+  text-align: center;
+  font-weight: bold;
+}
+.hr
+{
+  width:20%;
+  font-weight: bold;
+  height: 4px;
+  background: rgb(85, 93, 96);
+}
+/* middle */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container >*{
+  flex: 1;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 70%;
+  margin-right: 30px;
+}
+
+.image {
+  /* width: calc(33.33% - 10px); */
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+}
+
+.form {
+  width: 30%;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input, textarea {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .gallery {
+    width: 100%;
+    margin-right: 0;
+  }
+  .image {
+    width: calc(50% - 10px);
+  }
+  .form {
+    width: 100%;
+  }
+}
